@@ -1,0 +1,9 @@
+/*
+!src
+*.ts
+!dist
+!types
+!*.d.ts
+!*.js
+!CopyrightNotice
+jspm.*

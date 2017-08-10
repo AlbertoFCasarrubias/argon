@@ -1,0 +1,94 @@
+---
+---
+<html>
+<head>
+    <title>Streetview</title>
+  	<meta name="keywords" content="{{ site.keywords }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!-- Origin Trial Token, feature = WebVR, origin = https://argonjs.io, expires = 2017-06-06 -->
+    <meta http-equiv="origin-trial" data-feature="WebVR" data-expires="2017-06-06" content="ArfXzMSluPfAfoVDD+ne9oWykUyDeLFD/z4/0uRCdZ1491aSrytWyj7gnGhwK1/Tzg/D+UOvNgD2+L9PWqF5XwwAAABceyJvcmlnaW4iOiJodHRwczovL2FyZ29uanMuaW86NDQzIiwiZmVhdHVyZSI6IldlYlZSIiwiZXhwaXJ5IjoxNDk2NzcxODA0LCJpc1N1YmRvbWFpbiI6dHJ1ZX0=">
+    <script src="{{ site.argonjs }}"></script>
+    <style>
+      
+#menuContainer {
+  width: 100%;
+}
+
+#menu {
+  position: absolute;
+  bottom: 50px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  border: 0;
+  pointer-events: auto;
+}
+
+button {
+  font-size: 8;
+	color: rgba(127,255,255,0.75);
+	background: transparent;
+	outline: 1px solid rgba(127,255,255,0.75);
+	border: 0px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+button:hover {
+	background-color: rgba(0,255,255,0.5);
+}
+button:active {
+	color: #000000;
+	background-color: rgba(0,255,255,0.75);
+}
+
+#description {
+  z-index: 1;
+  pointer-events: auto;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 10px;
+  background-color:rgba(255,255,255,0.7);
+  -webkit-backdrop-filter: blur(5px);
+  position:absolute;
+  bottom: 0px;
+}
+
+.argon-focus #description {
+  transition: opacity 0.8s;
+  visibility: visible;
+  opacity: 1; 
+}
+
+.argon-no-focus #description {
+  transition: visibility 0s linear 0.8s, opacity 0.8s;
+  visibility: visible;
+  opacity: 0;
+}
+    </style>
+</head>
+  <body>
+    <div id="argon">
+      <div>
+        <div onclick="hideMe(this)" id="description">
+          <h2>Requesting a Custom Reality (Streetview)</h2>
+          <h5>(tap to dismiss)</h5>
+          <p>This example demonstrates the use of custom reality views, a feature which enables multiple apps to together augment a custom view of reality. In this case, the app requests a streetview reality which finds the nearest panoramic imagery to the user's current location. </p>  
+        </div>
+      </div>
+      <script>
+        function hideMe(elem) {
+            elem.style.display = 'none';
+        }	
+      </script>
+    </div>
+  </body>
+  <script src="app.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63191442-2', 'auto');
+  ga('send', 'pageview');
+</script>  
+</html>

@@ -1,0 +1,16 @@
+{
+    "extends": "./tsconfig.build.json",
+    "compilerOptions": {
+        "lib": ["es2015", "dom"],
+        "sourceMap": false,
+        "moduleResolution": "node",
+        "strictNullChecks": true,
+        "noUnusedLocals": true,
+        "traceResolution": false
+    },
+    "include": [
+        "types/declarations.d.ts",
+        "src/**/*.ts",
+        "test/**/*.ts"
+    ]
+}

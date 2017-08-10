@@ -1,0 +1,19 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<head>
+    <title>Example</title>
+    <script src="three.min.js"></script>
+    <script src="/jspm_packages/system.src.js"></script>
+    <script src="/jspm.browser.js"></script>
+    <script src="/jspm.config.js"></script>
+</head>
+<body>
+    <div id="content"></div>
+    <script>
+        System.import('test/app/example.ts!')
+            .catch(function(e) {
+                console.error(e && e.stack || e)
+            })
+    </script>
+</body>
+</html>
