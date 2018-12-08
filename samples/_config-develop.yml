@@ -12,7 +12,7 @@ markdown: kramdown
 
 keywords:    "argon, augmented reality, web, javascript"
 
-argonjs: "https://rawgit.com/argonjs/argon/develop/dist/argon.js"
+argonjs: "https://cdn.jsdelivr.net/gh/argonjs/argon@develop/dist/argon.js"
 
 redirect: "false"
 
